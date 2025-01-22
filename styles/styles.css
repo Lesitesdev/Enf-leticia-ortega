@@ -136,7 +136,10 @@ header {
 /*menu*/
 
 .container{
-    background-image: url(/img/pexels-bassam-abo-hamed-228955-725877.jpg);
+    background-image: url(/img/pexels-photo-1118153.webp);
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: center; 
     
 }
     

@@ -1,0 +1,279 @@
+:root {
+    --verde-escuro: #14424b;
+    --verde: #2f9364;
+    --orange: #ff7c37;
+    --degrade-btn: linear-gradient(#fe9611, #ff5c00);
+    --color-p: #a1a1a1;
+    --color-p-2: #868585;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif; /* Corrigido para 'Open Sans' */
+}
+
+body {
+    height: 100vh;
+    background-color: #f8f5f5;
+   
+    background-size: cover;
+    background-position: center;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+}
+
+a:hover {
+    color: orange;
+}
+
+header {
+    position: relative;
+    padding: 0 2rem;
+    background-color: rgb(2, 39, 51);
+}
+
+.btn-gradient {
+    padding: 10px 25px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    background-image: var(--degrade-btn);
+}
+
+.navbar {
+    width: 100%;
+    height: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo a {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar .links {
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar .toggle_btn {
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+.action_btn {
+    background-color: orange;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease; /* Corrigido para 'transform' */
+}
+
+.action_btn:hover {
+    transform: scale(1.05); /* Corrigido para 'transform' */
+    color: #fff;
+}
+
+.action_btn:active {
+    transform: scale(0.95); /* Corrigido para 'transform' */
+}
+
+/* DROPDOWN_MENU */
+
+.dropdown_menu {
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    height: 0;
+    width: 300px;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height 0.3s ease-in-out; /* Alterado para facilitar a transição */
+}
+
+.dropdown_menu.open {
+    height: 250px; /* Classe usada para abrir o menu */
+}
+
+.dropdown_menu li {
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:blueviolet;
+}
+
+.dropdown_menu .action_btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/*menu*/
+
+.container{
+    background-image: url(/img/pexels-bassam-abo-hamed-228955-725877.jpg);
+    
+}
+    
+
+
+main .container {
+    display: flex;
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    justify-content: space-between; /* Distribui o conteúdo horizontalmente */
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Garante que o container ocupe toda a altura da tela */
+    width: 100%; /* Garante que o container ocupe toda a largura da tela */
+}
+
+
+.main-text {
+    width: 50%;
+    color: rgb(12, 0, 0);
+    margin: 5rem
+}
+
+.main-text h1 {
+    font-size: 4.5rem;
+   
+}
+
+.main-text div {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.main-img {
+    width: 50%;
+    margin-right: 50px;
+}
+
+.main-img img {
+    width: 100%;
+    margin-left: 15px;
+}
+
+/* Menu Icon */
+.menu-icon {
+    display: none;
+    position: relative;
+    z-index: 10;
+}
+
+
+
+
+
+
+/* Responsividade */
+
+@media (max-width: 992px) {
+    .navbar .links,
+    .navbar .action_btn {
+        display: none;
+    }
+
+    .navbar .toggle_btn {
+        display: block;
+    }
+
+    .dropdown_menu {
+        display: block; /* Mantém a exibição controlada via altura */
+    }
+
+    .menu-icon {
+        display: block;
+    }
+    .ul {
+        position: fixed;
+        background: var(--verde-escuro);
+        top: 0;
+        width: 100%;
+        height: 100%;
+        left: 100%;
+        transition: 0.3s;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .ul li {
+        font-size: 2rem;
+        margin: 2rem 0;
+    }
+    ul.ativo {
+        left: 0;
+    }
+    main .container {
+        flex-direction: column;
+    }
+    main .container .main-text h1  {
+        font-size: 3rem;
+      
+    }
+
+    main h1 {
+        font-size: 7vw;
+        text-align: center;
+     
+    }
+    main h2 {
+        font-size: 2rem;
+        margin-left: 5rem;
+        text-align: justify;
+    }
+
+    main ul{
+        margin-left: 5rem;
+        text-align: justify;
+
+
+    }
+
+
+    main .container .main-img,
+    main .container .main-text {
+        width: 100%;
+        text-align: center;
+        margin-left: 1rem;
+    }
+    main .container .main-text h1 {
+        font-size: 4rem;
+    }
+    main .container .main-text div {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 575px) {
+    .dropdown_menu {
+        left: 2rem;
+        width: unset;
+    }
+}
